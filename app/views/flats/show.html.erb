@@ -1,0 +1,32 @@
+<div style="height:500px;width:100%; background-image:url(<%=@flat.picture_url%>);background-size:cover"></div>
+<div class="container" style="position:absolute;top: 490px;left: 200px;">
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%= @flat.name %></h5>
+                <p class="card-text"><%= @flat.address %></p>
+            </div>
+        </div><br/>
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">A bit more about this flat...</h5>
+            <p class="card-text"><%= @flat.description %></p>
+        </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">From:</span>
+                <input type="text" class="form-control" placeholder= <%= Date.today%> aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">To:</span>
+                <input type="text" class="form-control" placeholder= <%= Date.today%> aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <%= link_to  "Book", flat_path(@flat), class:"btn btn-success" %>
+        </div>
+    </div>
+</div>
+</div>

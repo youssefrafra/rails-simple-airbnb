@@ -1,0 +1,13 @@
+<div class="container" style="width:40%">
+        <h1>Add Flat</h1>
+        <%= simple_form_for @flat do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :picture_url %>
+        <%= f.input :description %>
+        <%= f.input :number_of_guests %>
+        <%= f.input :price_per_night %>
+        <br/>
+        <%= f.submit class:"btn btn-success"%>
+        <% end %>
+</div>

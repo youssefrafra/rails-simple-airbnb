@@ -1,0 +1,14 @@
+<div class="container" style="width:40%">
+        <h1>Edit Flat</h1>
+        <%= simple_form_for @flat do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :picture_url %>
+        <%= f.input :description %>
+        <%= f.input :number_of_guests %>
+        <%= f.input :price_per_night %>
+        <br/>
+        <%= f.submit class:"btn btn-success rounded"%>
+        <%= link_to  "Cancel", flat_path, class:"btn btn-danger rounded" %>
+        <% end %>
+</div>
